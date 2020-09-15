@@ -1,0 +1,50 @@
+# tell docker what version of the docker-compose.yml were using
+version: '3'
+
+# define the network
+networks:
+  gd-fs-network:
+
+# start the services section
+services:
+  # define the name of our service
+  # corresponds to the "--name" parameter
+  gd-fs-docker-nginx:
+    build: 
+      context: ./nginx
+    # defines the port mapping
+    # corresponds to the "-p" flag
+    ports:
+      - "8123:80"
+    tty: true
+    volumes:
+      - ./app:/var/www
+      - ./nginx/conf.d:/etc/nginx/conf.d
+    networks:
+      - gd-fs-network
+
+  gd-fs-docker-php-fpm:
+    build: 
+      context: ./php-fpm
+    tty: true
+    volumes:
+      - ./app:/var/www
+    networks:
+      - gd-fs-network
+
+  gd-fs-docker-mysql:
+    build:
+      context: ./mysql
+    tty: true
+    volumes:
+    - ./db:/var/lib/mysql/data
+    ports:
+      - "8345:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: secret # password for root user
+      MYSQL_DATABASE: gdfs # create database with name app
+      MYSQL_USER: gdfs # user app is granted full access to db app
+      MYSQL_PASSWORD: gdsecret # the password for user app
+    networks:
+      - gd-fs-network
+
