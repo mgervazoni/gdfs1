@@ -45,6 +45,7 @@ services:
       MYSQL_DATABASE: gdfs # create database with name app
       MYSQL_USER: gdfs # user app is granted full access to db app
       MYSQL_PASSWORD: gdsecret # the password for user app
+      MYSQL_LOWER_CASE_TABLE_NAMES: 1 # for caso insesitive file systems
     networks:
       - gd-fs-network
 
