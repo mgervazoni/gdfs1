@@ -30,7 +30,7 @@ Uma vez que o Docker Desktop esteja funcionando no seu computador, você deve:
 - O servidor web responderá no endereço `127.0.0.1:8123` 
 - O banco de dados MySQL 5.6 responderá na porta `8456`
 - Os dados de conexão ao banco podem ser encontrados no código do script `index.php`.
-- A pasta `db` conterá o banco de dados e deve ser comitada também durante a prova. Você não deve alterar diretamente o conteúdo desta pasta.
+- A pasta `db` (que será criada quando o ambiente for ativado) conterá o banco de dados e deve ser comitada também durante a prova. Você não deve alterar diretamente o conteúdo desta pasta.
 - A pasta `docker` contém as imagens docker do Nginx, PHP e MySQL que compõem o ambiente. Não faça alterações nesta pasta.
 
 ## Ferramentas recomendadas
