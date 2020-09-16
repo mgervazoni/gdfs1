@@ -4,21 +4,21 @@ Bem vindo(a) ao ambiente de desenvolvimento do processo seletivo para Desenvolve
 
 Este ambiente será utilizado durante a prova prática do processo.
 
-É necessário ter a versão estável mais recente do [Docker Desktop](https://www.docker.com/products/docker-desktop) instalado no seu computador.
+Faça um fork deste repositório para um novo repositório na sua conta do Github e siga as instruções abaixo.
 
 ## Verificação do ambiente
 
+É necessário ter a versão estável mais recente do [Docker Desktop](https://www.docker.com/products/docker-desktop) instalada no seu computador.
+
 Uma vez que o Docker Desktop esteja funcionando no seu computador, você deve:
 
-1. Fazer um fork deste repositório para um novo repositório na sua conta do Github.
+1. Baixar o seu novo repositório para o seu computador, usando o o comando `git clone` ou um cliente git como o [GitHub Desktop](https://desktop.github.com/).
 
-2. Baixar o seu novo repositório para o seu computador, usando o o comando git clone ou um cliente git como o [GitHub Desktop](https://desktop.github.com/).
-
-3. Verificar o funcionamento do ambiente. Para isto, abra um terminal de linha de comandos na pasta `gdfs-workspace` e digite o comando 
+2. Verificar o funcionamento do ambiente. Para isto, abra um terminal de linha de comandos na pasta `gdfs-workspace` e digite o comando 
 
    `docker-compose up -d`
 
-4. Após verificar que os containers foram ativados, abra o seu navegador no endereço
+3. Após verificar que os containers foram ativados, abra o seu navegador no endereço
 
     [http://127.0.0.1:8123]( http://127.0.0.1:8123)
 
