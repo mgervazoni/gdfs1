@@ -30,8 +30,12 @@ Uma vez que o Docker Desktop esteja funcionando no seu computador, você deve:
 - O servidor web responderá no endereço `127.0.0.1:8123` 
 - O banco de dados MySQL 5.6 responderá na porta `8456`
 - Os dados de conexão ao banco podem ser encontrados no código do script `index.php`.
+- A pasta `db` conterá o banco de dados e deve ser comitada também durante a prova. Você não deve alterar diretamente o conteúdo desta pasta.
+- A pasta `docker` contém as imagens docker do Nginx, PHP e MySQL que compõem o ambiente. Não faça alterações nesta pasta.
 
 ## Ferramentas recomendadas
 
-Durante a prova, você precisará acessar o banco de dados MySQL para criar tabelas e fazer outras consultas. Sugerimos que use um programa como o [SequelPro](https://sequelpro.com/) (para Mac) ou [HeidiSQL](https://www.heidisql.com/) (para Windows).
+Durante a prova, você precisará acessar o banco de dados MySQL para criar tabelas e fazer outras consultas. Sugerimos que use um programa como o [SequelPro](https://sequelpro.com/) (para Mac) ou [HeidiSQL](https://www.heidisql.com/) (para Windows) para isto.
+
+Você também deve escolher um editor de código com que esteja habituado. Na Gaudium, nós usamos o [VSCode](https://code.visualstudio.com/) e o [PHPStorm](https://www.jetbrains.com/pt-br/phpstorm/).
 
